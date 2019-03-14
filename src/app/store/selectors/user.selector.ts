@@ -9,7 +9,7 @@ export const selectUsersList = createSelector(
 	(state: IUserState) => state.users
 );
 
-export const selectSelectedUser = createSelector(
+export const selectUserPostsList = createSelector(
 	selectUsers,
-	(state: IUserState) => state.selectedUser
+	(state: IUserState) => state.userPosts
 );

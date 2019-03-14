@@ -12,10 +12,10 @@ export const userReducers = (
 				users: action.payload
 			};
 		}
-		case EUserActions.GetUserSuccess: {
+		case EUserActions.GetUserPostsSuccess: {
 			return {
 				...state,
-				selectedUser: action.payload
+				userPosts: action.payload
 			};
 		}
 

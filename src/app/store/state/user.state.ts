@@ -1,11 +1,11 @@
-import { IUser } from '../../shared';
+import { IPost, IUser } from '../../shared';
 
 export interface IUserState {
-	selectedUser: IUser;
+	userPosts: IPost[];
 	users: IUser[];
 }
 
 export const initialUserState: IUserState = {
-	selectedUser: null,
+	userPosts: null,
 	users: null
 };

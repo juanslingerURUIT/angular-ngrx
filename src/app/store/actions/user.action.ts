@@ -1,12 +1,22 @@
 import { Action } from '@ngrx/store';
 
-import { IUser } from '../../shared';
+import { IPost, IUser } from '../../shared';
 
 export enum EUserActions {
 	GetUsers = '[User] Get Users',
 	GetUsersSuccess = '[User] Get Users Success',
-	GetUser = '[User] Get User',
-	GetUserSuccess = '[User] Get User Success'
+	GetUserPosts = '[User] Get User Posts',
+	GetUserPostsSuccess = '[User] Get User Posts Success'
+}
+
+export class GetUserPosts implements Action {
+	public readonly type = EUserActions.GetUserPosts;
+	constructor(public payload: number) {}
+}
+
+export class GetUserPostsSuccess implements Action {
+	public readonly type = EUserActions.GetUserPostsSuccess;
+	constructor(public payload: IPost[]) {}
 }
 
 export class GetUsers implements Action {
@@ -18,14 +28,4 @@ export class GetUsersSuccess implements Action {
 	constructor(public payload: IUser[]) {}
 }
 
-export class GetUser implements Action {
-	public readonly type = EUserActions.GetUser;
-	constructor(public payload: number) {}
-}
-
-export class GetUserSuccess implements Action {
-	public readonly type = EUserActions.GetUserSuccess;
-	constructor(public payload: IUser) {}
-}
-
-export type UserActions = GetUser | GetUserSuccess | GetUsers | GetUsersSuccess;
+export type UserActions = GetUserPosts | GetUserPostsSuccess | GetUsers | GetUsersSuccess;
