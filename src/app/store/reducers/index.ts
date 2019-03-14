@@ -1,3 +1,3 @@
-export * from './app';
-export * from './config';
-export * from './user';
+export * from './app.reducer';
+export * from './config.reducer';
+export * from './user.reducer';

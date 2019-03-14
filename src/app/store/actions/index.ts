@@ -1,2 +1,2 @@
-export * from './config';
-export * from './user';
+export * from './config.action';
+export * from './user.action';

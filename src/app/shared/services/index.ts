@@ -1,2 +1,3 @@
-export * from './config';
-export * from './user';
+export * from './config.service';
+export * from './post.interface';
+export * from './user.interface';

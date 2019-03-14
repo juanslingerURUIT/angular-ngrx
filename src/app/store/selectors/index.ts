@@ -1,2 +1,2 @@
-export * from './config';
-export * from './user';
+export * from './config.selector';
+export * from './user.selector';
