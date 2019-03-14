@@ -1,0 +1,16 @@
+<h2>Comments by Post</h2>
+
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Body</th>
+	</tr>
+	<tr *ngFor="let comment of comments; trackBy: trackBy">
+		<td>{{ comment.id }}</td>
+		<td>{{ comment.name }}</td>
+		<td>{{ comment.email }}</td>
+		<td>{{ comment.body }}</td>
+	</tr>
+</table>

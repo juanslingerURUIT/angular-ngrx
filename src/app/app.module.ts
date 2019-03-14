@@ -8,22 +8,22 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared';
-import { ConfigEffects, UserEffects } from './store/effects';
+import { ConfigEffects, PostEffects, UserEffects } from './store/effects';
 import { appReducers } from './store/reducers';
-import { UsersComponent } from './users';
+import { UsersModule } from './users';
 
 @NgModule({
 	declarations: [
-		AppComponent,
-		UsersComponent
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
 		HttpClientModule,
 		SharedModule.forRoot(),
 		StoreModule.forRoot(appReducers),
-		EffectsModule.forRoot([ConfigEffects, UserEffects]),
+		EffectsModule.forRoot([ConfigEffects, PostEffects, UserEffects]),
 		StoreRouterConnectingModule.forRoot(),
+		UsersModule,
 		AppRoutingModule
 	],
 	providers: [],

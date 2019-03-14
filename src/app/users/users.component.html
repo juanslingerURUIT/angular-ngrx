@@ -1,3 +1,7 @@
-<div *ngFor="let user of usersList$ | async">
-	{{ user.name }}
-</div>
+<user-table [users]="usersList$ | async"
+	(selectedUser)="selectedUser($event)"></user-table>
+
+<post-table [posts]="userPostsList$ | async"
+	(selectedPost)="selectedPost($event)"></post-table>
+
+<comment-table [comments]="postCommentsList$ | async"></comment-table>

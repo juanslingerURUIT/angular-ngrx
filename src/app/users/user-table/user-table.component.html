@@ -1,0 +1,18 @@
+<h2>Users</h2>
+
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>User name</th>
+		<th>Email</th>
+		<th>Website</th>
+	</tr>
+	<tr *ngFor="let user of users; trackBy: trackBy" (click)="rowClick(user.id)">
+		<td>{{ user.id }}</td>
+		<td>{{ user.name }}</td>
+		<td>{{ user.username }}</td>
+		<td>{{ user.email }}</td>
+		<td>{{ user.website }}</td>
+	</tr>
+</table>
